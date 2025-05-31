@@ -1,0 +1,6 @@
+<form method = "POST">
+    {% csrf_token %}
+    <h1>Are you sure you want to delete {{ item.name }}?</h1>
+    <a href = "{% url 'food:index' %}" class = "btn btn-success"> Back </a>
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>

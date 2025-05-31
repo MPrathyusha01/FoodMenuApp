@@ -23,4 +23,6 @@ urlpatterns = [
     path('food/', include(('food.urls', 'food'), namespace='food')),
     # Adding a view for creating an item
     path('food/add/', views.itemForm, name='itemForm'),
+    # Adding a view for editing an item
+    path('food/edit/<int:item_id>/', views.item_update, name='item_update'),
 ]

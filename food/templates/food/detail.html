@@ -20,6 +20,9 @@
                     <h3>{{item.item_name}} </h3>
                     <h5> {{item.item_desc}}</h5>
                     <h6>₹ {{item.item_price}}</h6>
+
+                    <a href = "{% url 'food:item_update' item.id%}" class = "btn btn-primary"> Edit </a>
+                    <a href = "{% url 'food:item_delete' item.id %}" class = "btn btn-danger"> Delete </a>
                 </div>
                 <div class = "col md-2">
                     <a href = "{% url 'food:index' %}" class = "btn btn-success"> Back </a>
